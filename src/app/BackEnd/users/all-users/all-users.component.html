@@ -1,0 +1,21 @@
+<a [routerLink]="['add-user']" class="button green ripple-effect"><i class="icon-material-outline-add-circle-outline"></i>ADD USER</a>
+                    <table class="basic-table">
+
+                      <tbody><tr>
+                        <th>email</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Username</th>
+                        <th>Role</th>
+                        <th>ACTION</th>
+                      </tr>
+              
+                      <tr *ngFor="let user of listUsers">
+                        <td>{{user.email}}</td>
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td ><div *ngFor="let role in user.roles"> {{role.name}}</div></td>
+                        <a href="#small-dialog" class="popup-with-zoom-anim button dark ripple-effect ico" ><i class="icon-feather-edit"></i></a>
+                        <a href="#" class="button red ripple-effect ico"  ><i class="icon-feather-trash-2"></i></a>
+                      </tr>
+                    </tbody></table>
