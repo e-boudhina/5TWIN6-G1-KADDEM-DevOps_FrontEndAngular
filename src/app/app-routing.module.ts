@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Front/home/home.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
+import { ItemListComponent  } from './item-list/item-list.component';
 import { CartComponent } from './Front/cart/cart.component';
 import { CheckoutComponent } from './Front/checkout/checkout.component';
 import { OrderHistoryComponent } from './Front/order-history/order-history.component';
@@ -10,7 +12,7 @@ import { SuggestionComponent } from './Front/suggestion/suggestion.component';
 import { RelyComponent } from './Front/rely/rely.component';
 import { HomebbbComponent } from './Back/homebbb/homebbb.component';
 import { FooterbComponent } from './Back/footerb/footerb.component';
-import { HeaderComponent } from './Back/header/header.component'; 
+import { HeaderComponent } from './Back/header/header.component';
 import { ForumComponent } from './Front/forum/forum.component';
 import { DiscountComponent } from './Back/discount/discount.component';
 import { ClaimbComponent } from './Back/claimb/claimb.component';
@@ -24,7 +26,7 @@ import { ForumbbComponent } from './Back/forumbb/forumbb.component';
 import { RegisterComponent } from './Front/UserFront/register/register.component';
 import { LoginComponent } from './Front/UserFront/login/login.component';
 import { ForgotPasswordComponent } from './Front/UserFront/forgot-password/forgot-password.component';
-import { ErrorComponent } from './Front/UserFront/error/error.component'; 
+import { ErrorComponent } from './Front/UserFront/error/error.component';
 import { SuccessComponent } from './Front/UserFront/success/success.component';
 
 
@@ -55,18 +57,20 @@ const routes: Routes = [
 
 
 
+  { path: '', redirectTo: '/items', pathMatch: 'full' },
+  { path: 'items', component: ItemListComponent },
+  { path: 'items/:id', component: ItemDetailsComponent },
 
 
 
 
-  
 
 
-  
 
- 
+
+
   {path: '', redirectTo: '', pathMatch: 'full'}
- 
+
 
 ];
 

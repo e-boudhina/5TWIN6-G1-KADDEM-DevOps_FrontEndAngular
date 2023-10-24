@@ -33,6 +33,9 @@ import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { ErrorComponent } from './Front/UserFront/error/error.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ItemListComponent } from './item-list/item-list.component';
+import { ItemDetailsComponent } from './item-details/item-details.component';
+// import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -65,11 +68,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     ForgotPasswordComponent,
     SuccessComponent,
     ErrorComponent,
-    
-   
+    ItemListComponent,
+    ItemDetailsComponent,
 
- 
-   
+
+
+
+
   ],
   imports: [
     BrowserModule,
