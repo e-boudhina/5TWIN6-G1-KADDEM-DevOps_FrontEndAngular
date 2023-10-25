@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../service/item.service';
 import { Item } from '../Models/item';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-item-list',
@@ -48,7 +49,9 @@ export class ItemListComponent implements OnInit {
 
   deleteItem(item: Item) {
     this.itemService.deleteItem(item.id).subscribe(() => {
-      this.loadItems();
+      // Après la suppression, supprimez l'élément de la liste côté client
+      this.items = this.items.filter((i) => i !== item);
     });
   }
+
 }
