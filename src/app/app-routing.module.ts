@@ -28,6 +28,7 @@ import { ForgotPasswordComponent } from './Front/UserFront/forgot-password/forgo
 import { ErrorComponent } from './Front/UserFront/error/error.component';
 import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { PostComponent } from './Front/post/post.component';
+import { PostDetailComponent } from './Front/post-detail/post-detail.component';
 
 
 const routes: Routes = [
@@ -55,6 +56,8 @@ const routes: Routes = [
   {  path: 'errorLogin', component:  ErrorComponent},
   {  path: 'success', component:  SuccessComponent},
   {  path: 'post', component:  PostComponent},
+  { path: 'postAdd', component: PostDetailComponent },
+
 
   { path: 'items', component: ItemListComponent },
 

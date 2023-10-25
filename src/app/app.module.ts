@@ -35,6 +35,7 @@ import {  HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './Front/post/post.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ItemListComponent } from './item-list/item-list.component';
+import { PostDetailComponent } from './Front/post-detail/post-detail.component';
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
@@ -72,6 +73,7 @@ import { ItemListComponent } from './item-list/item-list.component';
     
    
     ItemListComponent,
+     PostDetailComponent,
 
 
 
