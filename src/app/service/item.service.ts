@@ -8,12 +8,13 @@ import { Item } from '../Models/item'; // Assurez-vous d'importer le modèle Ite
 })
 export class ItemService {
   private baseUrl = 'http://localhost:8055'; // Remplacez par l'URL de votre backend
+  private base = 'http://localhost:8090/MICORITEM-S'; // Remplacez par l'URL de votre backend
 
   constructor(private http: HttpClient) {}
 
   // Méthode pour récupérer tous les articles
   getAllItems(): Observable<Item[]> {
-    return this.http.get<Item[]>(`${this.baseUrl}/`);
+    return this.http.get<Item[]>(`${this.base}/`);
   }
 
   // Méthode pour ajouter un nouvel article
