@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Front/home/home.component';
 import { ItemListComponent  } from './item-list/item-list.component';
+import { OrgComponent  } from './org/org.component';
 import { CartComponent } from './Front/cart/cart.component';
 import { CheckoutComponent } from './Front/checkout/checkout.component';
 import { OrderHistoryComponent } from './Front/order-history/order-history.component';
@@ -55,7 +56,7 @@ const routes: Routes = [
   {  path: 'success', component:  SuccessComponent},
 
   { path: 'items', component: ItemListComponent },
-
+  { path: 'orgs', component: OrgComponent },
 
   { path: '', redirectTo: '/items', pathMatch: 'full' },
 

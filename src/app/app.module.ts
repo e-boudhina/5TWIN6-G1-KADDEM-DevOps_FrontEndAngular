@@ -34,6 +34,7 @@ import { ErrorComponent } from './Front/UserFront/error/error.component';
 import {  HttpClientModule } from '@angular/common/http';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ItemListComponent } from './item-list/item-list.component';
+import { OrgComponent } from './org/org.component';
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
@@ -68,7 +69,7 @@ import { ItemListComponent } from './item-list/item-list.component';
     SuccessComponent,
     ErrorComponent,
     ItemListComponent,
-
+    OrgComponent,
 
 
 
