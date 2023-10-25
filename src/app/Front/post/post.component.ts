@@ -18,11 +18,16 @@ export class PostComponent implements OnInit {
   }
 
   deletePost(id: number): void {
-    this.postService.deletePost(id).subscribe(() => {
-      this.loadPosts();
-    });
+    this.postService.deletePost(id).subscribe(
+      () => {
+        this.posts = this.posts.filter(post => post.id !== id);
+      },
+      (error) => {
+        console.error('Error deleting post:', error);
+        this.posts = this.posts.filter(post => post.id !== id);
+      }
+    );
   }
-
   private loadPosts(): void {
     this.postService.getPosts().subscribe(data => {
       this.posts = data;
