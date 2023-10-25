@@ -32,9 +32,8 @@ import { ForgotPasswordComponent } from './Front/UserFront/forgot-password/forgo
 import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { ErrorComponent } from './Front/UserFront/error/error.component';
 import {  HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ItemListComponent } from './item-list/item-list.component';
-import { ItemDetailsComponent } from './item-details/item-details.component';
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
@@ -69,7 +68,6 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     SuccessComponent,
     ErrorComponent,
     ItemListComponent,
-    ItemDetailsComponent,
 
 
 
@@ -77,6 +75,7 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,

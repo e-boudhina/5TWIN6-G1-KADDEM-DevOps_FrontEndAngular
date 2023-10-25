@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Front/home/home.component';
-import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ItemListComponent  } from './item-list/item-list.component';
 import { CartComponent } from './Front/cart/cart.component';
 import { CheckoutComponent } from './Front/checkout/checkout.component';
@@ -55,11 +54,10 @@ const routes: Routes = [
   {  path: 'errorLogin', component:  ErrorComponent},
   {  path: 'success', component:  SuccessComponent},
 
+  { path: 'items', component: ItemListComponent },
 
 
   { path: '', redirectTo: '/items', pathMatch: 'full' },
-  { path: 'items', component: ItemListComponent },
-  { path: 'items/:id', component: ItemDetailsComponent },
 
 
 

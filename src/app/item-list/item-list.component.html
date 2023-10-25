@@ -1,9 +1,40 @@
-<p>item-list works!</p>
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>{{ selectedItem.title }}</mat-card-title>
-  </mat-card-header>
-  <mat-card-content>
-    {{ selectedItem.description }}
-  </mat-card-content>
-</mat-card>
+<div>
+  <h1>Liste des Articles</h1>
+
+  <button (click)="addNewItem()">Ajouter un article</button>
+
+  <ul>
+    <li *ngFor="let item of items">
+      {{ item.title }} - {{ item.description }}
+      <button (click)="selectItem(item)">Sélectionner</button>
+      <button (click)="editItem(item)">Modifier</button>
+      <button (click)="deleteItem(item.id)">Supprimer</button>
+    </li>
+  </ul>
+
+  <div *ngIf="isAdding">
+    <h2>Ajouter un nouvel article</h2>
+    <form (submit)="saveNewItem()">
+      <input [(ngModel)]="newItem.title" placeholder="Titre" required>
+      <input [(ngModel)]="newItem.description" placeholder="Description" required>
+      <button type="submit">Enregistrer</button>
+      <button (click)="cancelAdd()">Annuler</button>
+    </form>
+  </div>
+
+  <div *ngIf="isEditing">
+    <h2>Modifier l'article</h2>
+    <form (submit)="saveEditedItem()">
+      <input [(ngModel)]="editedItem.title" placeholder="Titre" required>
+      <input [(ngModel)]="editedItem.description" placeholder="Description" required>
+      <button type="submit">Enregistrer</button>
+      <button (click)="cancelEdit()">Annuler</button>
+    </form>
+  </div>
+
+  <div *ngIf="selectedItem">
+    <h2>Détails de l'article</h2>
+    <p>Titre: {{ selectedItem.title }}</p>
+    <p>Description: {{ selectedItem.description }}</p>
+  </div>
+</div>
