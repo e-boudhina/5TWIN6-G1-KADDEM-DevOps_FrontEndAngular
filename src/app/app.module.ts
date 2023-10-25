@@ -36,6 +36,7 @@ import { PostComponent } from './Front/post/post.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ItemListComponent } from './item-list/item-list.component';
 import { PostDetailComponent } from './Front/post-detail/post-detail.component';
+import { OrgComponent } from './org/org.component';
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
@@ -75,6 +76,7 @@ import { PostDetailComponent } from './Front/post-detail/post-detail.component';
     ItemListComponent,
      PostDetailComponent,
 
+    OrgComponent,
 
 
 
