@@ -1,40 +1,24 @@
-<div>
-  <h1>Liste des Articles</h1>
-
-  <button (click)="addNewItem()">Ajouter un article</button>
+<div class="item-list">
+  <h2>Liste des éléments</h2>
 
   <ul>
     <li *ngFor="let item of items">
-      {{ item.title }} - {{ item.description }}
-      <button (click)="selectItem(item)">Sélectionner</button>
-      <button (click)="editItem(item)">Modifier</button>
-      <button (click)="deleteItem(item.id)">Supprimer</button>
+      <span>{{ item.title }}</span>
+      <button (click)="editItem(item)">Éditer</button>
+      <button (click)="deleteItem(item)">Supprimer</button>
     </li>
   </ul>
 
-  <div *ngIf="isAdding">
-    <h2>Ajouter un nouvel article</h2>
-    <form (submit)="saveNewItem()">
-      <input [(ngModel)]="newItem.title" placeholder="Titre" required>
-      <input [(ngModel)]="newItem.description" placeholder="Description" required>
-      <button type="submit">Enregistrer</button>
-      <button (click)="cancelAdd()">Annuler</button>
-    </form>
-  </div>
+  <h2>Édition d'élément</h2>
 
-  <div *ngIf="isEditing">
-    <h2>Modifier l'article</h2>
-    <form (submit)="saveEditedItem()">
-      <input [(ngModel)]="editedItem.title" placeholder="Titre" required>
-      <input [(ngModel)]="editedItem.description" placeholder="Description" required>
-      <button type="submit">Enregistrer</button>
-      <button (click)="cancelEdit()">Annuler</button>
-    </form>
-  </div>
+  <form (ngSubmit)="saveItem()">
+    <label for="title">Titre :</label>
+    <input type="text" id="title" [(ngModel)]="selectedItem.title" name="title" required>
 
-  <div *ngIf="selectedItem">
-    <h2>Détails de l'article</h2>
-    <p>Titre: {{ selectedItem.title }}</p>
-    <p>Description: {{ selectedItem.description }}</p>
-  </div>
+    <label for="description">Description :</label>
+    <input type="text" id="description" [(ngModel)]="selectedItem.description" name="description" required>
+
+    <button type="submit">Enregistrer</button>
+    <button type="button" (click)="cancelEdit()">Annuler</button>
+  </form>
 </div>
