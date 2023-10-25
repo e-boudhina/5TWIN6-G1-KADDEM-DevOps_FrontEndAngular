@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Front/home/home.component';
 import { ItemListComponent  } from './item-list/item-list.component';
+import { OrgComponent  } from './org/org.component';
 import { CartComponent } from './Front/cart/cart.component';
 import { CheckoutComponent } from './Front/checkout/checkout.component';
 import { OrderHistoryComponent } from './Front/order-history/order-history.component';
@@ -27,6 +28,8 @@ import { LoginComponent } from './Front/UserFront/login/login.component';
 import { ForgotPasswordComponent } from './Front/UserFront/forgot-password/forgot-password.component';
 import { ErrorComponent } from './Front/UserFront/error/error.component';
 import { SuccessComponent } from './Front/UserFront/success/success.component';
+import { PostComponent } from './Front/post/post.component';
+import { PostDetailComponent } from './Front/post-detail/post-detail.component';
 
 
 const routes: Routes = [
@@ -53,9 +56,12 @@ const routes: Routes = [
   {  path: 'forgotpassword', component:  ForgotPasswordComponent},
   {  path: 'errorLogin', component:  ErrorComponent},
   {  path: 'success', component:  SuccessComponent},
+  {  path: 'post', component:  PostComponent},
+  { path: 'postAdd', component: PostDetailComponent },
+
 
   { path: 'items', component: ItemListComponent },
-
+  { path: 'orgs', component: OrgComponent },
 
   { path: '', redirectTo: '/items', pathMatch: 'full' },
 

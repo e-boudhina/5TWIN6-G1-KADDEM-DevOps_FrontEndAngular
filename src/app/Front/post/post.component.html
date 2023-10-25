@@ -1,0 +1,40 @@
+
+<app-navbar></app-navbar>
+<div class="container">
+    <app-post-detail></app-post-detail>
+    <div class="card mt-4 mb-4" style="background-color: #F0F8FF;" *ngFor="let post of posts">
+
+        <div class="card-body mt-4">
+            <div class="row mt-4">
+                <div class="col-md-9 mt-4">
+                    <h5 class="card-title" style="color: #00345E;">{{ post.title }}</h5>
+                </div>
+                <div class="col-md-1">
+                    <a href="#" class="btn btn-info text-white py-1 px-4">edit</a>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-danger text-white py-1 px-3" (click)="deletePost(post.id)">Delete</button>
+                </div>
+            </div>
+            <a href="#">
+                <p class="card-text" style="color: black;">{{ post.content }}</p>
+            </a>
+        </div>
+        <div class="text-center mb-3">
+            <img [src]="post.image_url" class="img-fluid" width="900" height="700" alt="Post Image">
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-5">
+                    <small style="color: #00345E;">
+                        Posted by: <span style="color: #FF4400;">{{ post.user.username }}</span> on
+                        <span style="color: #FF4400;">{{ post.created_at }}</span>
+                        <br>
+                        Email :
+                        <span style="color: #FF4400;">{{ post.user.email }}</span>
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
