@@ -65,9 +65,43 @@ export class ItemListComponent implements OnInit {
     this.editedItem = new Item(); // Reset the form
   }
 
-  deleteItem(id: number) {
-    this.itemService.deleteItem(id).subscribe(() => {
-      this.loadItems();
-    });
+  deleteItem(id: number): void {
+    this.itemService.deleteItem(id).subscribe(
+      () => {
+        // Suppression réussie, mettez en œuvre votre logique ici
+        console.log("Item supprimé avec succès");
+
+        // Après la suppression, actualisez la liste
+        this.refreshItemList();
+      },
+      (error) => {
+        // Erreur lors de la suppression
+        if (error.error && error.error.message) {
+          // Affichez le message renvoyé par le serveur
+          console.error("Erreur: " + error.error.message);
+        } else {
+          // Gérez l'erreur de manière appropriée
+          console.error("Erreur inattendue lors de la suppression de l'item");
+        }
+      }
+    );
   }
+
+  refreshItemList(): void {
+    // Appelez la méthode pour récupérer la liste des éléments
+    this.itemService.getAllItems().subscribe(
+      (data) => {
+        // Mettez à jour la liste d'éléments dans votre composant
+        this.items = data;
+      },
+      (error) => {
+        console.error("Erreur lors de la récupération de la liste d'items après la suppression");
+      }
+    );
+  }
+
+
+
+
+
 }
