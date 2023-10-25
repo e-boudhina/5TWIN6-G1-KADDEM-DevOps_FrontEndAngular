@@ -26,6 +26,7 @@ import { LoginComponent } from './Front/UserFront/login/login.component';
 import { ForgotPasswordComponent } from './Front/UserFront/forgot-password/forgot-password.component';
 import { ErrorComponent } from './Front/UserFront/error/error.component'; 
 import { SuccessComponent } from './Front/UserFront/success/success.component';
+import { PostComponent } from './Front/post/post.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,7 @@ const routes: Routes = [
   {  path: 'forgotpassword', component:  ForgotPasswordComponent},
   {  path: 'errorLogin', component:  ErrorComponent},
   {  path: 'success', component:  SuccessComponent},
+  {  path: 'post', component:  PostComponent},
 
 
 

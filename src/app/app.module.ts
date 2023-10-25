@@ -33,6 +33,7 @@ import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { ErrorComponent } from './Front/UserFront/error/error.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PostComponent } from './Front/post/post.component';
 
 @NgModule({
   declarations: [
@@ -65,6 +66,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     ForgotPasswordComponent,
     SuccessComponent,
     ErrorComponent,
+    PostComponent,
     
    
 
