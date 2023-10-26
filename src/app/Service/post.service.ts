@@ -20,10 +20,10 @@ export class PostService {
   getPosts(): Observable<Post[]> {
     return this.http.get<Post[]>(this.apiUrl2);
   }
-  
-  deletePost(id: number): Observable<void> {
+
+  deletePost(id: number): Observable<string> {
     const deleteUrl = `${this.apiUrl}/delete/${id}`;
-    return this.http.delete<void>(deleteUrl);
+    return this.http.delete<string>(deleteUrl);
   }
   private apiUrl4 = 'http://127.0.0.1:8088/post/addPost';
 
