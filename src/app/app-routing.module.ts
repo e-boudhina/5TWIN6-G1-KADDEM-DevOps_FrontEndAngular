@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Front/home/home.component';
 import { ItemListComponent  } from './item-list/item-list.component';
 import { OrgComponent  } from './org/org.component';
-import { CartComponent } from './Front/cart/cart.component';
 import { CheckoutComponent } from './Front/checkout/checkout.component';
 import { OrderHistoryComponent } from './Front/order-history/order-history.component';
 import { ClaimComponent } from './Front/claim/claim.component';
@@ -30,11 +29,16 @@ import { ErrorComponent } from './Front/UserFront/error/error.component';
 import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { PostComponent } from './Front/post/post.component';
 import { PostDetailComponent } from './Front/post-detail/post-detail.component';
+import {IndexUserComponent} from "./Front/user/index-user/index-user.component";
+import {AddUserComponent} from "./Front/user/add-user/add-user.component";
+import {UpdateUserComponent} from "./Front/user/update-user/update-user.component";
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'Cart', component: CartComponent},
+  { path: 'user', component: IndexUserComponent},
+  { path: 'addUser', component: AddUserComponent},
+  { path: 'updateUser', component: UpdateUserComponent},
   {  path: 'Checkout', component: CheckoutComponent },
   {  path: 'OrderHistory', component:  OrderHistoryComponent},
   {  path: 'Claim', component:  ClaimComponent},
