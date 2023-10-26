@@ -12,7 +12,7 @@ export class UserService {
   private fetchAllUsersURL = 'http://localhost:8090/USER-SERVICE/user/users';
   private fetchUserByIdURL = 'http://localhost:8090/USER-SERVICE/user/';
   private deleteUsersByIdURL = 'http://localhost:8090/USER-SERVICE/user';
-  private addUserURL = 'http://localhost:8090/user/USER-SERVICE/add';
+  private addUserURL = 'http://localhost:8090/USER-SERVICE/add';
   constructor(private http: HttpClient) {
 
   }
