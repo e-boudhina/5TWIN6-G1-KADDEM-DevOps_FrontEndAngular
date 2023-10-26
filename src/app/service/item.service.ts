@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Item } from '../Models/item'; // Assurez-vous d'importer le modèle Item correspondant
+import { Item } from '../Models/item';
+import {User} from "../Models/user.model"; // Assurez-vous d'importer le modèle Item correspondant
 
 @Injectable({
   providedIn: 'root'
@@ -35,5 +36,9 @@ export class ItemService {
   // Méthode pour obtenir un article par ID
   getItemById(id: number): Observable<Item> {
     return this.http.get<Item>(`${this.baseUrl}/${id}`);
+  }
+
+  getAllUsers(): Observable<User[]> {
+    return this.http.get<User[]>(`http://127.0.0.1:8075/user/users/`);
   }
 }

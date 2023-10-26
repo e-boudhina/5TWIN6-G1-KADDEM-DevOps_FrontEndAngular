@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../service/item.service';
 import { Item } from '../Models/item';
 import { filter } from 'rxjs/operators';
+import {User} from "../Models/user.model";
 
 @Component({
   selector: 'app-item-list',
@@ -10,12 +11,14 @@ import { filter } from 'rxjs/operators';
 })
 export class ItemListComponent implements OnInit {
   items: Item[] = [];
+  users: User[] = [];
   selectedItem: Item = new Item(); // Vous pouvez initialiser selectedItem ici
 
   constructor(private itemService: ItemService) { }
 
   ngOnInit(): void {
     this.loadItems();
+    this.loaduser();
   }
 
   loadItems() {
@@ -23,7 +26,11 @@ export class ItemListComponent implements OnInit {
       this.items = items;
     });
   }
-
+  loaduser() {
+    this.itemService.getAllUsers().subscribe((user: User[]) => {
+      this.users = user;
+    });
+  }
   editItem(item: Item) {
     this.selectedItem = item;
   }

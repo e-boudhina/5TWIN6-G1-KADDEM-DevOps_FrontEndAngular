@@ -4,5 +4,6 @@ export class Item {
   description: string = "";
   category: string = "";
   state: string = "";
+  user_id: number= 1;
   user: any = null; // Remplacez "any" par le type approprié de l'utilisateur
 }
