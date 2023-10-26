@@ -15,32 +15,39 @@
 
   <div class="container-fluid">
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Claims</span></h2>
-    <div class="row px-xl-5">
-      <div class="col-lg-7 mb-5">
-        <div class="contact-form bg-light p-30">
-          <div id="success">
-            <h2>Ajouter un nouvel élément</h2>
-            <form (ngSubmit)="saveItem()">
+    <div class="row px-xl-5"><div class="col-lg-6 mb-5">
+      <div class="contact-form bg-light p-30">
+        <div id="success">
+          <h2>Ajouter un nouvel élément</h2>
+          <form (ngSubmit)="saveItem()">
+            <div class="form-group">
               <label for="title">Titre :</label>
-              <input type="text" id="title" [(ngModel)]="selectedItem.title" name="title" required>
+              <input type="text" id="title" [(ngModel)]="selectedItem.title" name="title" class="form-control" required>
+            </div>
 
+            <div class="form-group">
               <label for="description">Description :</label>
-              <input type="text" id="description" [(ngModel)]="selectedItem.description" name="description" required>
+              <input type="text" id="description" [(ngModel)]="selectedItem.description" name="description" class="form-control" required>
+            </div>
 
+            <div class="form-group">
               <label for="category">Catégorie :</label>
-              <input type="text" id="category" [(ngModel)]="selectedItem.category" name="category" required>
+              <input type="text" id="category" [(ngModel)]="selectedItem.category" name="category" class="form-control" required>
+            </div>
 
+            <div class="form-group">
               <label for="state">État :</label>
-              <input type="text" id="state" [(ngModel)]="selectedItem.state" name="state" required>
+              <input type="text" id="state" [(ngModel)]="selectedItem.state" name="state" class="form-control" required>
+            </div>
 
-              <button type="submit">Enregistrer</button>
-              <button type="button" (click)="cancelEdit()">Annuler</button>
-            </form>
-
-          </div>
+            <button type="submit" class="btn btn-primary">Enregistrer</button>
+            <button type="button" (click)="cancelEdit()" class="btn btn-secondary">Annuler</button>
+          </form>
         </div>
       </div>
-      <div class="col-lg-5 mb-5">
+    </div>
+
+      <div class="col-lg-6 mb-5">
         <div class="bg-light p-30 mb-30">
           <h2>Liste des éléments</h2>
           <div class="item-list">
@@ -54,6 +61,8 @@
                   <th>Description</th>
                   <th>Catégorie</th>
                   <th>État</th>
+                  <th>Propriétaire</th>
+                  <th>address</th>
                   <th>Actions</th>
                 </tr>
                 </thead>
@@ -63,6 +72,9 @@
                   <td>{{ item.description }}</td>
                   <td>{{ item.category }}</td>
                   <td>{{ item.state }}</td>
+                  <td>{{ item.user.username }}</td>
+                  <td>{{ item.user.address }}</td> <!-- Afficher le nom d'utilisateur -->
+
                   <td>
                     <button (click)="editItem(item)">Éditer</button>
                     <button (click)="deleteItem(item)">Supprimer</button>
