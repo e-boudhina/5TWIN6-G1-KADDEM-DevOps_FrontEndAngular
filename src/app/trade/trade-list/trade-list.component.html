@@ -1,0 +1,57 @@
+ <div class="container-fluid">
+    <app-navbar></app-navbar>
+
+    <!-- Breadcrumb Start -->
+    <div class="row px-xl-5">
+      <div class="col-12">
+        <nav class="breadcrumb bg-light mb-30">
+          <a class="breadcrumb-item text-dark" routerLink="">Home</a>
+          <a class="breadcrumb-item text-dark" routerLink="">Trades</a>
+          <span class="breadcrumb-item active">List</span>
+        </nav>
+      </div>
+    </div>
+    <!-- Breadcrumb End -->
+
+    <div class="container-fluid">
+      <h2 class="section-title position-relative text-uppercase mx-xl-12 mb-10"><span class="bg-secondary pr-3">Trades</span></h2>
+      <div class="col-lg-12 col-12">
+        <div class="col-lg-7 mb-5">
+          <a [routerLink]="['/tradesAdd']" class="button green ripple-effect" xmlns="http://www.w3.org/1999/html"><i class="icon-material-outline-add-circle-outline"></i>New Trade</a>
+          <!-- Your form for adding a new trade can go here -->
+        </div>
+        <div class="col-lg-10 col-12">
+          <div class="bg-light p-30 mb-30">
+            <h2>List of Trades</h2>
+            <div class="trade-list">
+              <div class="row">
+                <div class="col-md-6" *ngFor="let trade of trades">
+                  <div class="card mb-4">
+                    <div class="card-body">
+
+
+                      <p class="card-text">Start Date: {{ trade.tradeStartDate | date: 'dd/MM/yyyy' }}</p>
+                      <p class="card-text">End Date: {{ trade.tradeEndDate | date: 'dd/MM/yyyy' }}</p>
+                      <p class="card-text">Status: {{ trade.status }}</p>
+                      <p class="card-text">Offered Item: {{ trade.offeredItem }}</p>
+                      <p class="card-text">Requested Item : {{ trade.requestedItem }}</p>
+                      <p class="card-text">User: {{ trade.user?.firstname }} {{ trade.user?.lastname }}</p>
+                      <!-- Add Edit and Delete buttons here -->
+                      <button >Éditer</button>
+                      <button (click)="deleteTrade(trade.id)" style="background-color: #2F4F4F; color: #fff; margin-left: 20px; padding-left: 10px;">Delete</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <app-footer></app-footer>
+  </div>
+
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>

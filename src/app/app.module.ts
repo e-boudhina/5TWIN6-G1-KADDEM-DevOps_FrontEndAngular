@@ -40,6 +40,10 @@ import { OrgComponent } from './org/org.component';
 import { IndexUserComponent } from './Front/user/index-user/index-user.component';
 import { AddUserComponent } from './Front/user/add-user/add-user.component';
 import { UpdateUserComponent } from './Front/user/update-user/update-user.component';
+
+import {TradeListComponent} from './trade/trade-list/trade-list.component';
+import { AddTradeComponent } from './trade/add-trade/add-trade.component';
+
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
@@ -76,17 +80,14 @@ import { UpdateUserComponent } from './Front/user/update-user/update-user.compon
     SuccessComponent,
     ErrorComponent,
     PostComponent,
-
-
+    TradeListComponent,
     ItemListComponent,
      PostDetailComponent,
-
     OrgComponent,
       AddUserComponent,
       IndexUserComponent,
       UpdateUserComponent,
-
-
+     AddTradeComponent,
 
 
   ],

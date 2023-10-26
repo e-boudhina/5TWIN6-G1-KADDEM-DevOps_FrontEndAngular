@@ -29,9 +29,14 @@ import { ErrorComponent } from './Front/UserFront/error/error.component';
 import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { PostComponent } from './Front/post/post.component';
 import { PostDetailComponent } from './Front/post-detail/post-detail.component';
+
 import {IndexUserComponent} from "./Front/user/index-user/index-user.component";
 import {AddUserComponent} from "./Front/user/add-user/add-user.component";
 import {UpdateUserComponent} from "./Front/user/update-user/update-user.component";
+
+import {TradeListComponent} from "./trade/trade-list/trade-list.component";
+import {AddTradeComponent} from "./trade/add-trade/add-trade.component";
+
 
 
 const routes: Routes = [
@@ -65,6 +70,9 @@ const routes: Routes = [
 
 
   { path: 'items', component: ItemListComponent },
+  { path: 'trades', component: TradeListComponent },
+  { path: 'tradesAdd', component: AddTradeComponent },
+
   { path: 'orgs', component: OrgComponent },
 
   { path: '', redirectTo: '/items', pathMatch: 'full' },
