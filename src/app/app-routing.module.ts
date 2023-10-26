@@ -30,6 +30,8 @@ import { ErrorComponent } from './Front/UserFront/error/error.component';
 import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { PostComponent } from './Front/post/post.component';
 import { PostDetailComponent } from './Front/post-detail/post-detail.component';
+import {TradeListComponent} from "./trade/trade-list/trade-list.component";
+import {AddTradeComponent} from "./trade/add-trade/add-trade.component";
 
 
 const routes: Routes = [
@@ -61,6 +63,9 @@ const routes: Routes = [
 
 
   { path: 'items', component: ItemListComponent },
+  { path: 'trades', component: TradeListComponent },
+  { path: 'tradesAdd', component: AddTradeComponent },
+
   { path: 'orgs', component: OrgComponent },
 
   { path: '', redirectTo: '/items', pathMatch: 'full' },

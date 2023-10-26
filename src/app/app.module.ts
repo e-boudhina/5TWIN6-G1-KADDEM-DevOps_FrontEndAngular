@@ -37,6 +37,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ItemListComponent } from './item-list/item-list.component';
 import { PostDetailComponent } from './Front/post-detail/post-detail.component';
 import { OrgComponent } from './org/org.component';
+import {TradeListComponent} from './trade/trade-list/trade-list.component';
+import { AddTradeComponent } from './trade/add-trade/add-trade.component';
+  ''
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
@@ -71,12 +74,14 @@ import { OrgComponent } from './org/org.component';
     SuccessComponent,
     ErrorComponent,
     PostComponent,
-    
-   
+    TradeListComponent,
+
+
     ItemListComponent,
      PostDetailComponent,
 
     OrgComponent,
+     AddTradeComponent,
 
 
 
