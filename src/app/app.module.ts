@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Front/home/home.component';
-import { CartComponent } from './Front/cart/cart.component';
 import { CheckoutComponent } from './Front/checkout/checkout.component';
 import { OrderHistoryComponent } from './Front/order-history/order-history.component';
 import { ClaimComponent } from './Front/claim/claim.component';
@@ -37,6 +36,10 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ItemListComponent } from './item-list/item-list.component';
 import { PostDetailComponent } from './Front/post-detail/post-detail.component';
 import { OrgComponent } from './org/org.component';
+
+import { IndexUserComponent } from './Front/user/index-user/index-user.component';
+import { AddUserComponent } from './Front/user/add-user/add-user.component';
+import { UpdateUserComponent } from './Front/user/update-user/update-user.component';
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
@@ -62,7 +65,9 @@ import { OrgComponent } from './org/org.component';
     PurchaseOrderComponent,
     NavbarComponent,
     OrderHistoryComponent,
-    CartComponent,
+    IndexUserComponent,
+    AddUserComponent,
+    UpdateUserComponent,
     CheckoutComponent,
     ForumbbComponent,
     RegisterComponent,
@@ -71,12 +76,15 @@ import { OrgComponent } from './org/org.component';
     SuccessComponent,
     ErrorComponent,
     PostComponent,
-    
-   
+
+
     ItemListComponent,
      PostDetailComponent,
 
     OrgComponent,
+      AddUserComponent,
+      IndexUserComponent,
+      UpdateUserComponent,
 
 
 
