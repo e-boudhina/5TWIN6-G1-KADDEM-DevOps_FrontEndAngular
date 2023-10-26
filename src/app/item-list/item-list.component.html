@@ -40,6 +40,14 @@
               <input type="text" id="state" [(ngModel)]="selectedItem.state" name="state" class="form-control" required>
             </div>
 
+            <div class="form-group">
+              <label for="user">Propriétaire :</label>
+              <select id="user" [(ngModel)]="selectedItem.user_id" name="user" class="form-control">
+                <option value="">Sélectionnez un utilisateur</option>
+                <option *ngFor="let user of users" [value]="user.id" >{{ user.username }}</option>
+              </select>
+            </div>
+
             <button type="submit" class="btn btn-primary">Enregistrer</button>
             <button type="button" (click)="cancelEdit()" class="btn btn-secondary">Annuler</button>
           </form>
@@ -52,8 +60,6 @@
           <h2>Liste des éléments</h2>
           <div class="item-list">
             <div class="item-list">
-              <h2>Liste des éléments</h2>
-
               <table class="table-bordered">
                 <thead>
                 <tr>
@@ -86,10 +92,37 @@
           </div>
       </div>
     </div>
+
+      <div class="col-lg-6 mb-5">
+        <div class="bg-light p-30 mb-30">
+          <h2>Liste des éléments</h2>
+          <div class="item-list">
+            <div class="item-list">
+              <table class="table-bordered">
+                <thead>
+                <tr>
+                  <th>username</th>
+                  <th>address</th>
+                  <th>email</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let user of users">
+                  <td>{{ user.username }}</td>
+                  <td>{{ user.address }}</td>
+                  <td>{{ user.email }}</td> <!-- Afficher le nom d'utilisateur -->
+
+                </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
   </div>
 
   <app-footer></app-footer>
 </div>
 
 <!-- Back to Top -->
-<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+</div>>
