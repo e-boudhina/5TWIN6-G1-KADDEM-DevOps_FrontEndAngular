@@ -1,80 +1,79 @@
 <div class="container-fluid">
-    <app-navbar></app-navbar>
-  
-    <!-- Breadcrumb Start -->
-    <div class="row px-xl-5">
-      <div class="col-12">
-        <nav class="breadcrumb bg-light mb-30">
-          <a class="breadcrumb-item text-dark" routerLink="">Home</a>
-          <a class="breadcrumb-item text-dark" routerLink="">Shop</a>
-          <span class="breadcrumb-item active">Checkout</span>
-        </nav>
-      </div>
-    </div>
-    <!-- Breadcrumb End -->
-  
-    <div class="container-fluid">
-      <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Claims</span></h2>
-      <div class="row px-xl-5">
-        <div class="col-lg-7 mb-5">
-          <div class="contact-form bg-light p-30">
-            <div id="success">
-              <h2>Ajouter un nouvel élément</h2>
-              <form (ngSubmit)="saveOrg()">
-                <label for="title">Titre :</label>
-                <input type="text" id="title" [(ngModel)]="selectedOrg.title" name="title" required>
-  
-                <label for="description">Description :</label>
-                <input type="text" id="description" [(ngModel)]="selectedOrg.description" name="description" required>
-  
-                <label for="category">Catégorie :</label>
-                <input type="text" id="category" [(ngModel)]="selectedOrg.category" name="category" required>
+  <app-navbar></app-navbar>
 
-  
-                <button type="submit">Enregistrer</button>
-                <button type="button" (click)="cancelEdit()">Annuler</button>
-              </form>
-  
+  <!-- Breadcrumb Start -->
+  <div class="row px-xl-5">
+    <div class="col-12">
+      <nav class="breadcrumb bg-light mb-30">
+        <a class="breadcrumb-item text-dark" routerLink="">Home</a>
+        <a class="breadcrumb-item text-dark" routerLink="">Shop</a>
+        <span class="breadcrumb-item active">Checkout</span>
+      </nav>
+    </div>
+  </div>
+  <!-- Breadcrumb End -->
+
+  <div class="container-fluid " >
+    <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Claims</span></h2>
+    <div class="row px-xl-5" >
+      <div class="col-lg-6 mb-5" >
+        <div class="contact-form bg-light p-30" style="color: #212529" >
+          <div id="success">
+            <h2>Ajouter un nouvel élément</h2>
+            <form (ngSubmit)="saveOrg()">
+              <div>
+              <label for="title">Titre : </label>
+              <br>
+              <input type="text" id="title" [(ngModel)]="selectedOrg.title" name="title"  size="59" required>
             </div>
+              <label for="description" >Description :</label>
+              <br>
+              <textarea id="description" [(ngModel)]="selectedOrg.description" name="description" rows="4" cols="60" required></textarea>
+              <div>
+              <label for="category">Catégorie :</label>
+              <br>
+              <input type="text" id="category" [(ngModel)]="selectedOrg.category" name="category"  size="59" required>
+            </div>
+              <button type="submit" class="btn btn-primary" style="margin-top: 30px; margin-right: 30px;">Enregistrer</button>
+              <button type="button" class="btn btn-secondary" style="margin-top: 30px;" (click)="cancelEdit()">Annuler</button>
+            </form>
           </div>
         </div>
-        <div class="col-lg-5 mb-5">
-          <div class="bg-light p-30 mb-30">
-            <h2>Liste des éléments</h2>
-            <div class="item-list">
-              <div class="item-list">
-                <h2>Liste des éléments</h2>
-  
-                <table class="table-bordered">
-                  <thead>
-                  <tr>
-                    <th>Titre</th>
-                    <th>Description</th>
-                    <th>Catégorie</th>
-                    <th>Actions</th>
-                  </tr>
-                  </thead>
-                  <tbody>
-                  <tr *ngFor="let org of orgs">
-                    <td>{{ org.title }}</td>
-                    <td>{{ org.description }}</td>
-                    <td>{{ org.category }}</td>
-                    <td>
-                      <button (click)="editOrg(org)">Éditer</button>
-                      <button (click)="deleteOrg(org)">Supprimer</button>
-                    </td>
-                  </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
+      </div>
+      <div class="col-lg-6 mb-8">
+        <div class="bg-light p-30 mb-30">
+          <h2>Liste des éléments</h2>
+         
+
+            <table class="table-bordered">
+              <thead>
+                <tr style="color: #212529;">
+                  <th class="col-md-2"  >Titre</th>
+                  <th>Description</th>
+                  <th>Catégorie</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let org of orgs">
+                  <td>{{ org.title }}</td>
+                  <td>{{ org.description }}</td>
+                  <td>{{ org.category }}</td>
+                  <td>
+                    <button (click)="editOrg(org)" class="btn btn-secondary" style="padding-inline: 45px; margin-top: 15px; margin-left: 35px; margin-bottom: 15px;">Éditer</button>
+                    <button (click)="deleteOrg(org)"  style="padding-inline: 30px; margin-top: 0px; margin-left: 30px; margin-bottom: 15px; background-color: #ec2121; color:white">Supprimer</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          
         </div>
       </div>
     </div>
-  
-    <app-footer></app-footer>
   </div>
-  
-  <!-- Back to Top -->
-  <a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
-  
+
+  <app-footer></app-footer>
+</div>
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
