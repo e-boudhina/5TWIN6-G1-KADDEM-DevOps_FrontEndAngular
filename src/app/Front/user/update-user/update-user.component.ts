@@ -54,24 +54,24 @@ export class UpdateUserComponent implements OnInit {
   }
 
   onSubmit() {
-    if (this.updateForm.valid) {
-      // Prepare the post data object
-      const updatedUserData = {
-        username: this.updateForm.value.username,
-        firstname: this.updateForm.value.firstname,
-        lastname: this.updateForm.value.lastname,
-        email: this.updateForm.value.email,
-        age: this.updateForm.value.age,
-        address: this.updateForm.value.address,
-        phonenumber: this.updateForm.value.phonenumber,
-      };
-
-      this.userService.createUser(this.updateForm.value.id, updatedUserData)
-        .subscribe(response => {
-          console.log('Post created:', response);
-          //window.location.reload();
-          this.router.navigate(['/user']);
-        });
-    }
+    // if (this.updateForm.valid) {
+    //   // Prepare the post data object
+    //   const updatedUserData = {
+    //     username: this.updateForm.value.username,
+    //     firstname: this.updateForm.value.firstname,
+    //     lastname: this.updateForm.value.lastname,
+    //     email: this.updateForm.value.email,
+    //     age: this.updateForm.value.age,
+    //     address: this.updateForm.value.address,
+    //     phonenumber: this.updateForm.value.phonenumber,
+    //   };
+    //
+    //   this.userService.createUser(this.updateForm.value.id, updatedUserData)
+    //     .subscribe(response => {
+    //       console.log('Post created:', response);
+    //       //window.location.reload();
+    //       this.router.navigate(['/user']);
+    //     });
+   // }
   }
 }

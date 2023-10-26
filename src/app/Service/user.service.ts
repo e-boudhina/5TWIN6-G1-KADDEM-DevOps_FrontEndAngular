@@ -9,10 +9,10 @@ import {User} from "../Models/user.model";
 })
 export class UserService {
 
-  private fetchAllUsersURL = 'http://localhost:8075/user/users';
-  private fetchUserByIdURL = 'http://localhost:8075/user/';
-  private deleteUsersByIdURL = 'http://localhost:8075/user';
-  private addUserURL = 'http://localhost:8075/user/add';
+  private fetchAllUsersURL = 'http://localhost:8090/USER-SERVICE/user/user/users';
+  private fetchUserByIdURL = 'http://localhost:8090/USER-SERVICE/user/';
+  private deleteUsersByIdURL = 'http://localhost:8090/USER-SERVICE/user';
+  private addUserURL = 'http://localhost:8090/user/USER-SERVICE/add';
   constructor(private http: HttpClient) {
 
   }
@@ -28,9 +28,9 @@ export class UserService {
     const fetchUserUrl = `${this.fetchUserByIdURL}/${id}`;
     return this.http.get<any>(fetchUserUrl, { responseType: 'json'});
   }
-  createUser(id: number, userData: any) :Observable<any> {
+  createUser(userData: { firstname: any; address: any; phonenumber: any; email: any; age: any; username: any; lastname: any }) :Observable<any> {
     console.log("before");
-    return this.http.post<any>(`${this.addUserURL}/${id}`, userData);
+    return this.http.post<any>(this.addUserURL, userData);
 
   }
 
