@@ -1,7 +1,7 @@
 // universite-list.component.ts
 import { Component, OnInit } from '@angular/core';
-import {Universite} from "../Models/universite";
-import {UniversiteService} from "../Service/Universite/universite.service";
+import { Universite } from "../Models/universite";
+import { UniversiteService } from "../Service/Universite/universite.service";
 
 @Component({
   selector: 'app-universite-list',
@@ -24,8 +24,11 @@ export class UniversiteListComponent implements OnInit {
     console.log('Édition de l\'université :', universite);
   }
 
-  deleteUniversite(universite: Universite) {
-    // Mettez en œuvre la logique pour la suppression de l'université ici
-    console.log('Suppression de l\'université :', universite);
+  deleteUniversiteById(universiteId: number) {
+    this.universiteService.deleteUniversite(universiteId).subscribe(() => {
+      // Mettez à jour la liste des universités après la suppression
+      this.universites = this.universites.filter(u => u.idUniversite !== universiteId);
+      console.log('Suppression de l\'université avec l\'ID :', universiteId);
+    });
   }
 }

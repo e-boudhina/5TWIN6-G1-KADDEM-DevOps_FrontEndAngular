@@ -26,4 +26,7 @@ export class UniversiteService {
   updateUniversite(universite: Universite): Observable<Universite> {
     return this.http.put<Universite>(`${this.baseUrl}/update-universite`, universite);
   }
+  deleteUniversite(id: number): Observable<Universite> {
+    return this.http.delete<Universite>(`${this.baseUrl}/delete-universite/${id}`);
+  }
 }
