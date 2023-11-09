@@ -36,6 +36,7 @@ import {UpdateUserComponent} from "./Front/user/update-user/update-user.componen
 
 import {TradeListComponent} from "./trade/trade-list/trade-list.component";
 import {AddTradeComponent} from "./trade/add-trade/add-trade.component";
+import {UniversiteListComponent} from "./universite-list/universite-list.component";
 
 
 
@@ -70,6 +71,7 @@ const routes: Routes = [
 
 
   { path: 'items', component: ItemListComponent },
+  { path: 'universite', component: UniversiteListComponent },
   { path: 'trades', component: TradeListComponent },
   { path: 'tradesAdd', component: AddTradeComponent },
 

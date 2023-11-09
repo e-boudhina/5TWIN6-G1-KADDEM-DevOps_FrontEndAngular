@@ -43,6 +43,7 @@ import { UpdateUserComponent } from './Front/user/update-user/update-user.compon
 
 import {TradeListComponent} from './trade/trade-list/trade-list.component';
 import { AddTradeComponent } from './trade/add-trade/add-trade.component';
+import { UniversiteListComponent } from './universite-list/universite-list.component';
 
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
@@ -88,6 +89,8 @@ import { AddTradeComponent } from './trade/add-trade/add-trade.component';
       IndexUserComponent,
       UpdateUserComponent,
      AddTradeComponent,
+    UniversiteListComponent,
+
 
 
   ],

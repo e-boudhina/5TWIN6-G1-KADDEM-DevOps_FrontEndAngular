@@ -1,0 +1,30 @@
+<div class="container-fluid">
+  <app-navbar></app-navbar><!-- universite-list.component.html -->
+<div class="col-lg-6 mb-5">
+  <div class="bg-light p-30 mb-30">
+    <h2>Liste des Universités</h2>
+    <div class="item-list">
+      <table class="table-bordered">
+        <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nom de l'Université</th>
+          <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let universite of universites">
+          <td>{{ universite.idUniversite }}</td>
+          <td>{{ universite.nomUniv }}</td>
+
+          <td>
+            <button (click)="editUniversite(universite)">Éditer</button>
+            <button (click)="deleteUniversite(universite)">Supprimer</button>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</div>
