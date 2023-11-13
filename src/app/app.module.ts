@@ -30,19 +30,13 @@ import { LoginComponent } from './Front/UserFront/login/login.component';
 import { ForgotPasswordComponent } from './Front/UserFront/forgot-password/forgot-password.component';
 import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { ErrorComponent } from './Front/UserFront/error/error.component';
-import {  HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { PostComponent } from './Front/post/post.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { ItemListComponent } from './item-list/item-list.component';
 import { PostDetailComponent } from './Front/post-detail/post-detail.component';
-import { OrgComponent } from './org/org.component';
-
 import { IndexUserComponent } from './Front/user/index-user/index-user.component';
 import { AddUserComponent } from './Front/user/add-user/add-user.component';
 import { UpdateUserComponent } from './Front/user/update-user/update-user.component';
-
-import {TradeListComponent} from './trade/trade-list/trade-list.component';
-import { AddTradeComponent } from './trade/add-trade/add-trade.component';
 import { UniversiteListComponent } from './universite-list/universite-list.component';
 
 // import { MatCardModule, MatButtonModule } from '@angular/material';
@@ -81,18 +75,11 @@ import { UniversiteListComponent } from './universite-list/universite-list.compo
     SuccessComponent,
     ErrorComponent,
     PostComponent,
-    TradeListComponent,
-    ItemListComponent,
-     PostDetailComponent,
-    OrgComponent,
+    PostDetailComponent,
       AddUserComponent,
       IndexUserComponent,
       UpdateUserComponent,
-     AddTradeComponent,
     UniversiteListComponent,
-
-
-
   ],
   imports: [
     FormsModule,

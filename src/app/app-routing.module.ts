@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './Front/home/home.component';
-import { ItemListComponent  } from './item-list/item-list.component';
-import { OrgComponent  } from './org/org.component';
 import { CheckoutComponent } from './Front/checkout/checkout.component';
 import { OrderHistoryComponent } from './Front/order-history/order-history.component';
 import { ClaimComponent } from './Front/claim/claim.component';
@@ -29,15 +27,10 @@ import { ErrorComponent } from './Front/UserFront/error/error.component';
 import { SuccessComponent } from './Front/UserFront/success/success.component';
 import { PostComponent } from './Front/post/post.component';
 import { PostDetailComponent } from './Front/post-detail/post-detail.component';
-
 import {IndexUserComponent} from "./Front/user/index-user/index-user.component";
 import {AddUserComponent} from "./Front/user/add-user/add-user.component";
 import {UpdateUserComponent} from "./Front/user/update-user/update-user.component";
-
-import {TradeListComponent} from "./trade/trade-list/trade-list.component";
-import {AddTradeComponent} from "./trade/add-trade/add-trade.component";
 import {UniversiteListComponent} from "./universite-list/universite-list.component";
-
 
 
 const routes: Routes = [
@@ -68,28 +61,9 @@ const routes: Routes = [
   {  path: 'success', component:  SuccessComponent},
   {  path: 'post', component:  PostComponent},
   { path: 'postAdd', component: PostDetailComponent },
-
-
-  { path: 'items', component: ItemListComponent },
   { path: 'universite', component: UniversiteListComponent },
-  { path: 'trades', component: TradeListComponent },
-  { path: 'tradesAdd', component: AddTradeComponent },
-
-  { path: 'orgs', component: OrgComponent },
-
   { path: '', redirectTo: '/items', pathMatch: 'full' },
-
-
-
-
-
-
-
-
-
   {path: '', redirectTo: '', pathMatch: 'full'}
-
-
 ];
 
 @NgModule({
