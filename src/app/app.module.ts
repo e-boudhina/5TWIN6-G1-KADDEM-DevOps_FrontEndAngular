@@ -38,7 +38,9 @@ import { IndexUserComponent } from './Front/user/index-user/index-user.component
 import { AddUserComponent } from './Front/user/add-user/add-user.component';
 import { UpdateUserComponent } from './Front/user/update-user/update-user.component';
 import { UniversiteListComponent } from './universite-list/universite-list.component';
-
+import { AddEtudiantComponent } from './Front/etudiant/add-etudiant/add-etudiant.component';
+import { IndexEtudiantComponent } from './Front/etudiant/index-etudiant/index-etudiant.component';
+import { UpdateEtudiantComponent } from './Front/etudiant/update-etudiant/update-etudiant.component';
 // import { MatCardModule, MatButtonModule } from '@angular/material';
 
 @NgModule({
@@ -80,6 +82,9 @@ import { UniversiteListComponent } from './universite-list/universite-list.compo
       IndexUserComponent,
       UpdateUserComponent,
     UniversiteListComponent,
+    AddEtudiantComponent,
+    IndexEtudiantComponent,
+    UpdateEtudiantComponent,
   ],
   imports: [
     FormsModule,
