@@ -31,7 +31,9 @@ import {IndexUserComponent} from "./Front/user/index-user/index-user.component";
 import {AddUserComponent} from "./Front/user/add-user/add-user.component";
 import {UpdateUserComponent} from "./Front/user/update-user/update-user.component";
 import {UniversiteListComponent} from "./universite-list/universite-list.component";
-
+import {IndexEtudiantComponent} from "./Front/etudiant/index-etudiant/index-etudiant.component";
+import {AddEtudiantComponent} from "./Front/etudiant/add-etudiant/add-etudiant.component";
+import {UpdateEtudiantComponent} from "./Front/etudiant/update-etudiant/update-etudiant.component";
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -62,6 +64,9 @@ const routes: Routes = [
   {  path: 'post', component:  PostComponent},
   { path: 'postAdd', component: PostDetailComponent },
   { path: 'universite', component: UniversiteListComponent },
+  { path: 'student', component: IndexEtudiantComponent},
+  { path: 'addStudent', component: AddEtudiantComponent},
+  { path: 'updateStudent/:studentId', component: UpdateEtudiantComponent },
   { path: '', redirectTo: '/items', pathMatch: 'full' },
   {path: '', redirectTo: '', pathMatch: 'full'}
 ];
