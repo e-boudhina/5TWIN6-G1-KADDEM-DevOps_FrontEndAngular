@@ -12,6 +12,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 export class UpdateEtudiantComponent implements OnInit {
   studentForm: FormGroup;
   studentId: string | null;
+  options: string[] = ['GAMIX', 'SE', 'SAE', 'INFINI', 'TWIN'];
 
   constructor(private http: HttpClient, private formBuilder: FormBuilder,private studentService: EtudiantService, private router: Router, private route: ActivatedRoute) { }
 
