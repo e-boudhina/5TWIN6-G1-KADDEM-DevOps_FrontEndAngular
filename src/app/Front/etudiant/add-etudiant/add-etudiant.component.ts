@@ -21,8 +21,10 @@ export class AddEtudiantComponent implements OnInit {
     this.studentForm = this.formBuilder.group({
       firstname: [''],
       lastname: ['' ],
-      option: [''],
+      op: [''],
     });
+    console.log(this.options);
+
   }
 
   // Function to handle form submission
@@ -32,7 +34,7 @@ export class AddEtudiantComponent implements OnInit {
       const studentData = {
         prenomE: this.studentForm.value.firstname,
         nomE: this.studentForm.value.lastname,
-        op: this.studentForm.value.option
+        op: this.studentForm.value.op
       };
 
       // @ts-ignore
@@ -44,8 +46,8 @@ export class AddEtudiantComponent implements OnInit {
         });
     }
   }
-  onOptionChange(value: string) {
-    this.selectedOption = value;
-    console.log('Selected Option:', this.selectedOption);
-  }
+  // onOptionChange(value: string) {
+  //   this.selectedOption = value;
+  //   console.log('Selected Option:', this.selectedOption);
+  // }
 }
