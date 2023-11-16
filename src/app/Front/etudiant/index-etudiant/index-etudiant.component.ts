@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 })
 export class IndexEtudiantComponent implements OnInit {
 
-  students: Etudiant[];
+  students: Etudiant[] = [];
 
   constructor(private studentService: EtudiantService, private router: Router) { }
 
