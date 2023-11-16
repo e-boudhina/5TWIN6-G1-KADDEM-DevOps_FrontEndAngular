@@ -33,7 +33,10 @@
 
     <div class="mb-3">
       <label for="op" class="form-label">Option</label>
-      <input type="text" class="form-control" id="op" formControlName="option">
+      <!-- Use select element for a dropdown -->
+      <select class="form-select" id="op" formControlName="op">
+        <option *ngFor="let option of options" [value]="option">{{ option }}</option>
+      </select>
     </div>
 
     <div class="center justify">
